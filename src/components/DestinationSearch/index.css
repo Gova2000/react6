@@ -1,0 +1,11 @@
+/* Write your CSS here */
+img {
+  height: 20px;
+  width: 20px;
+}
+
+.back {
+  background-color: #ffffff;
+  height: 100vh;
+  padding: 10vh;
+}
