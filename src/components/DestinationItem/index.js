@@ -8,22 +8,10 @@ const DestinationItem = props => {
 
   return (
     <div className="card1">
-      <div className="card">
-        <img src={imgUrl} alt="image" />
+      <li className="card">
+        <img src={imgUrl} alt={name} />
         <p>{name}</p>
-      </div>
-      <div className="card">
-        <img src={imgUrl} alt="image" />
-        <p>{name}</p>
-      </div>
-      <div className="card">
-        <img src={imgUrl} alt="image" />
-        <p>{name}</p>
-      </div>
-      <div className="card">
-        <img src={imgUrl} alt="image" />
-        <p>{name}</p>
-      </div>
+      </li>
     </div>
   )
 }
