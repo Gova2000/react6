@@ -1,11 +1,48 @@
 /* Write your CSS here */
-.img {
-  height: 20px;
-  width: 20px;
+.img1 {
+  height: 15px;
+  width: 15px;
 }
 
 .back {
   background-color: #ffffff;
   height: 100vh;
   padding: 10vh;
+}
+h1 {
+  margin-left: 10vh;
+}
+input {
+  border: none;
+  outline: none;
+  background-color: #f1f5f9;
+}
+
+.box {
+  display: flex;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  margin-left: 10vh;
+  max-width: 250px;
+}
+
+.design {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .back {
+    text-align: center;
+  }
+  .box {
+    justify-content: center;
+    align-self: center;
+  }
 }
