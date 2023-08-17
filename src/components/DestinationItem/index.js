@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 // Write your code here
 import './index.css'
 
-const Card = props => {
+const DestinationItem = props => {
   const {Details} = props
-  const {id, name, imgUrl} = Details
+  const {name, imgUrl} = Details
 
   return (
     <div className="card1">
@@ -27,4 +28,4 @@ const Card = props => {
   )
 }
 
-export default Card
+export default DestinationItem

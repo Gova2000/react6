@@ -1,31 +1,39 @@
 // Write your code here
 import {Component} from 'react'
+
+import DestinationItem from './components/DestinationItem'
+
 import './index.css'
-import Card from './components/DestinationItem'
 
-const DestinationSearch = props => {
-  const {destinationsList} = props
+class DestinationSearch extends Component {
+  state = {inputItem: ''}
 
-  const ItemsList = destinationsList
-
-  const Search = event => {
-    const inputItem = event.target.value
+  Search = event => {
+    this.setState({inputItem: event.target.value})
   }
 
-  const result = ItemsList.filter(each => each.name.includes(inputItem))
+  render() {
+    const {destinationsList} = this.props
 
-  return (
-    <div>
-      <h1>Destination Search</h1>
-      <input type="search" value={inputItem} onClick={Search} <img src='https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png' alt='search'/> />
+    const result = destinationsList.filter(each =>
+      each.name.includes(inputItem),
+    )
 
-      <ul>
-        {result.map(each => (
-          <Card Details={each} key={each.id} />
-        ))}
-      </ul>
-    </div>
-  )
+    // <img src='https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png' alt='search'/>
+
+    return (
+      <div>
+        <h1>Destination Search</h1>
+        <input type="search" value={inputItem} onClick={this.Search} />
+        />
+        <ul>
+          {result.map(each => (
+            <DestinationItem Details={each} key={each.id} />
+          ))}
+        </ul>
+      </div>
+    )
+  }
 }
 
 export default DestinationSearch
