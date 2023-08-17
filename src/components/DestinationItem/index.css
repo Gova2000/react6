@@ -2,17 +2,26 @@
 .card1 {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: start;
 }
 img {
   height: 150px;
   width: 150px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 10px;
+}
+p {
+  margin: 10px;
+  max-width: 150px;
 }
 .card {
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: left;
+}
+@media (max-width: 576px) {
+  img {
+    width: 200px;
+  }
 }
